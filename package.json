@@ -1,0 +1,24 @@
+{
+  "name": "nobta",
+  "private": true,
+  "description": "NOBTA monorepo: npm workspaces for the JS/TS apps and packages. The Laravel backend is managed separately with Composer.",
+  "engines": {
+    "node": "^22.13.0 || ^24.3.0",
+    "npm": ">=10"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm run test"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10"
+  }
+}

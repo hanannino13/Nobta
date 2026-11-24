@@ -1,0 +1,35 @@
+/* Placeholder tokens; real values come with the brand identity (docs/design/DESIGN_GUIDELINES.md). */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111318;
+  --color-text-muted: #5b616e;
+  --space-4: 16px;
+  --space-6: 24px;
+
+  color-scheme: light dark;
+  font-family: system-ui, 'Segoe UI', Roboto, 'Noto Sans Arabic', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #0f1115;
+    --color-text: #f2f3f5;
+    --color-text-muted: #a3a9b5;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Logical properties only (RTL-ready): no left/right. */
+.shell {
+  padding-block: var(--space-6);
+  padding-inline: var(--space-4);
+}
+
+.shell p {
+  color: var(--color-text-muted);
+}
